@@ -1,0 +1,5 @@
+to make tailwind css work u go to the website first, copy the code to install it in the frontend folder
+then also import the tailwindcss(), in the vite.config.js in the plugin,
+after importing the tailwind at the top
+then put the @tailwindcss in the index.css
+
