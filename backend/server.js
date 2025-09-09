@@ -9,9 +9,14 @@ const expenseRoutes = require('./routes/ExpenseRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes')
 const app = express()
 
+const allowedOrigins = [
+  "https://fin-calc-beta.vercel.app", 
+  "http://localhost:5173",
+];
+
 app.use(
     cors({
-        origin : process.env.CLIENT_URL || "*",
+        origin: allowedOrigins,
         methods: ["Get", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
     })
